@@ -3,8 +3,11 @@
 <%= render @new_call %>
 
 <div>
-  <%= link_to "Edit this new call", edit_new_call_path(@new_call) %> |
-  <%= link_to "Back to new calls", new_calls_path %>
+  <%= link_to "Editar este registro", edit_new_call_path(@new_call) %> |
+  <%= link_to "Voltar para todos os registros", new_calls_path %>
 
-  <%= button_to "Destroy this new call", @new_call, method: :delete %>
+  <%= button_to @new_call, method: :delete do %>
+    <br/>
+    <button type="button" class="btn btn-outline-danger">Apagar este registro</button>
+  <% end %>
 </div>
