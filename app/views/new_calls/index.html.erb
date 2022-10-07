@@ -1,14 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>New calls</h1>
-
-<div id="new_calls">
-  <% @new_calls.each do |new_call| %>
-    <%= render new_call %>
-    <p>
-      <%= link_to "Show this new call", new_call %>
-    </p>
-  <% end %>
+<div class="pb-3">
+  <h1>Chamados</h1>
+  <a type="button" class="btn btn-primary" href="/new_calls/new"> 
+    Criar chamado
+  </a>
 </div>
 
-<%= link_to "New new call", new_new_call_path %>
+<div id="new_calls" class="card">
+  <% @new_calls.each do |new_call| %>
+    <div class="card-body">
+      <%= render new_call %>
+      <p>
+        <%= link_to new_call do%>
+          <button type="button" class="btn btn-outline-success"> mostrar chamado </button>
+        <% end %>
+      </p>
+    </div>
+  <% end %>
+</div>
