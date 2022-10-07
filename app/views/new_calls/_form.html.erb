@@ -12,7 +12,7 @@
   <% end %>
 
   <div>
-    <%= form.label :date, style: "display: block" %>
+    <%= form.label :data, style: "display: block" %>
     <%= form.text_field :date %>
   </div>
 
@@ -22,16 +22,16 @@
   </div>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :nome, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :request, style: "display: block" %>
+    <%= form.label :pedido, style: "display: block" %>
     <%= form.text_field :request %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="pt-3">
+    <%= form.submit "registrar chamado", :class => "btn btn-info" %>
   </div>
 <% end %>

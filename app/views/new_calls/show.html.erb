@@ -1,13 +1,12 @@
+<h1> Mais detalhes </h1>
 <p style="color: green"><%= notice %></p>
 
 <%= render @new_call %>
 
 <div>
-  <%= link_to "Editar este registro", edit_new_call_path(@new_call) %> |
-  <%= link_to "Voltar para todos os registros", new_calls_path %>
-
-  <%= button_to @new_call, method: :delete do %>
-    <br/>
-    <button type="button" class="btn btn-outline-danger">Apagar este registro</button>
-  <% end %>
+  <%= link_to "editar este registro", edit_new_call_path(@new_call), :class => "btn btn-outline-secondary" %>
+  <%= link_to "voltar para todos os registros", new_calls_path, :class => "btn btn-outline-primary" %>
+</div>
+<div class="pt-3">
+  <%= button_to "apagar este registro", @new_call, method: :delete, :class => "btn btn-outline-danger" %>
 </div>
