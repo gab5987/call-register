@@ -8,7 +8,7 @@
 </div>
 
 <div id="new_calls" class="card">
-  <% @new_calls.each do |new_call| %>
+  <% @new_calls.reverse_each do |new_call| %>
     <div class="card-body">
       <%= render new_call %>
       <p>
