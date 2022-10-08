@@ -13,25 +13,28 @@
 
   <div>
     <%= form.label :data, style: "display: block" %>
-    <%= form.text_field :date %>
+    <%= form.text_field :date, :value => Date.today.strftime("%e / %m / %Y") %>
   </div>
 
-  <div>
+  <div class="pt-3">
     <%= form.label :local, style: "display: block" %>
     <%= form.text_field :local %>
   </div>
 
-  <div>
+  <div class="pt-3">
     <%= form.label :nome, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
+  <div class="pt-3">
     <%= form.label :pedido, style: "display: block" %>
-    <%= form.text_field :request %>
+    <%= form.select :request, 
+      ['Desligar', 'Ligar', 'Diminuir', 'Aumentar', 'Iluminação', 'Evento', 'Inversor'],
+      :class => "dropdown-iten"
+    %>
   </div>
 
-  <div class="pt-3">
+  <div class="pt-5">
     <%= form.submit "registrar chamado", :class => "btn btn-info" %>
   </div>
 <% end %>
