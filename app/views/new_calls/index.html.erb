@@ -24,13 +24,14 @@
   require 'csv'
 
   file = "#{Rails.root}/public/data.csv"
-  
-  table = @new_calls.all;0 # ";0" stops output.  Change "User" to any model.
-  
+  table = @new_calls.all;0
+
+ if table.first
   CSV.open( file, 'w' ) do |writer|
-    writer << table.first.attributes.map { |a,v| a }
-    table.each do |s|
-      writer << s.attributes.map { |a,v| v }
+      writer << table.first.attributes.map { |a,v| a }
+      table.each do |s|
+        writer << s.attributes.map { |a,v| v }
+      end
     end
-  end
+ end
 %>
