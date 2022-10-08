@@ -1,13 +1,25 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Sistema de gerenciamento de chamados</a>
+  <img 
+    width="5%" height="5%" class="navbar-brand"
+    src="https://seeklogo.com/images/R/republica-federativa-do-brasil-brasao-logo-66C22A3895-seeklogo.com.png"
+  />
+  <a class="navbar-brand" href="/new_calls"> Gerenciamento de chamados <a/>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%# <a class="nav-link" href="#">Link</a> %>
+    <ul class="navbar-nav mr-auto pl-5">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Mais opções
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/data.csv" download> Exportar para excel </a>
+          <a class="dropdown-item" href="#">  </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item " onClick="getCsvFile()"> Registro de chamados</a>
+        </div>
       </li>
     </ul>
 
